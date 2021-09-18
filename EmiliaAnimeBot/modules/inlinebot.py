@@ -57,12 +57,12 @@ class AioHttp:
 
 __mod_name__ = "Inline"
 __help__ = """
- <b> INLINE BOT SERVICE OF YUUKI</b> 
+ <b>INLINE BOT SERVICE OF YUUKI<b> 
  
 <i> I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.</i>
-<b>Syntax</b>
+<b>Syntax<b>
    @YuukiKonnoRobot [command] [query]
-<b> Commands Available</b>
+<b> Commands Available<b>
 - alive - Check Bot's Stats.
 - yt [query] - Youtube Search.
 - tr [langcode] [query] - Translate Text.
@@ -100,12 +100,12 @@ __help__ = """
 
 __mod_name__ = "Inline"
 __help__ = """
- <b> INLINE BOT SERVICE OF YUUKI</b> 
+ <b> INLINE BOT SERVICE OF AIGER AKABANE<b> 
  
 <i> I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.</i>
-<b>Syntax</b>
-   @YuukiKonnoRobot [command] [query]
-<b> Commands Available</b>
+<b>Syntax<b>
+   @AigerAkabaneRobot [command] [query]
+<b>Commands Available<b>
 - alive - Check Bot's Stats.
 - yt [query] - Youtube Search.
 - tr [langcode] [query] - Translate Text.
@@ -408,25 +408,25 @@ async def inline_query_handler(client, query):
             lol = f"Movie - {mov_title}\n Click to see more"
             msg = (
                 "<a href=" + poster + ">&#8203;</a>"
-                "<b>Title : </b><code>"
+                "<b>Title : <b><code>"
                 + mov_title
                 + "</code>\n<code>"
                 + mov_details
-                + "</code>\n<b>Rating : </b><code>"
+                + "</code>\n<b>Rating : <b><code>"
                 + mov_rating
-                + "</code>\n<b>Country : </b><code>"
+                + "</code>\n<b>Country : <b><code>"
                 + mov_country[0]
-                + "</code>\n<b>Language : </b><code>"
+                + "</code>\n<b>Language : <b><code>"
                 + mov_language[0]
-                + "</code>\n<b>Director : </b><code>"
+                + "</code>\n<b>Director : <b><code>"
                 + director
-                + "</code>\n<b>Writer : </b><code>"
+                + "</code>\n<b>Writer : <b><code>"
                 + writer
-                + "</code>\n<b>Stars : </b><code>"
+                + "</code>\n<b>Stars : <b><code>"
                 + stars
-                + "</code>\n<b>IMDB Url : </b>"
+                + "</code>\n<b>IMDB Url : <b>"
                 + mov_link
-                + "\n<b>Story Line : </b>"
+                + "\n<b>Story Line : <b>"
                 + story_line
             )
             results.append(
@@ -609,7 +609,7 @@ async def inline_query_handler(client, query):
 
             wiki = a.get("wiki")
 
-            caption = f"""<b><u>Information Gathered Successfully</b></u>
+            caption = f"""<b><u>Information Gathered Successfully<b></u>
         <b>
         Country Name:- {name}
         Alternative Spellings:- {hu}
@@ -628,8 +628,8 @@ async def inline_query_handler(client, query):
         Sub Region:- {sub}
         Time Zones:- {tom}
         Top Level Domain:- {lanester}
-        wikipedia:- {wiki}</b>
-        Gathered By Daisy X.</b>
+        wikipedia:- {wiki}<b>
+        Gathered By Aiger Akabane.<b>
         """
             results.append(
                 InlineQueryResultArticle(
@@ -663,7 +663,7 @@ async def inline_query_handler(client, query):
             job = fake.job()
             android = fake.android_platform_token()
             pc = fake.chrome()
-            res = f"<b><u> Fake Information Generated</b></u>\n<b>Name :-</b><code>{name}</code>\n\n<b>Address:-</b><code>{address}</code>\n\n<b>IP ADDRESS:-</b><code>{ip}</code>\n\n<b>credit card:-</b><code>{cc}</code>\n\n<b>Email Id:-</b><code>{email}</code>\n\n<b>Job:-</b><code>{job}</code>\n\n<b>android user agent:-</b><code>{android}</code>\n\n<b>Pc user agent:-</b><code>{pc}</code>"
+            res = f"<b><u> Fake Information Generated<b></u>\n<b>Name :-<b><code>{name}</code>\n\n<b>Address:-<b><code>{address}</code>\n\n<b>IP ADDRESS:-<b><code>{ip}</code>\n\n<b>credit card:-<b><code>{cc}</code>\n\n<b>Email Id:-<b><code>{email}</code>\n\n<b>Job:-<b><code>{job}</code>\n\n<b>android user agent:-<b><code>{android}</code>\n\n<b>Pc user agent:-<b><code>{pc}</code>"
             results.append(
                 InlineQueryResultArticle(
                     title="Fake infomation gathered",
@@ -684,7 +684,7 @@ async def inline_query_handler(client, query):
             Sed = ""
             for match in result:
                 Sed += match.get_text() + "\n\n"
-            res = f"<b><u>Match information gathered successful</b></u>\n\n\n<code>{Sed}</code>"
+            res = f"<b><u>Match information gathered successful<b></u>\n\n\n<code>{Sed}</code>"
             results.append(
                 InlineQueryResultArticle(
                     title="Match information gathered",
@@ -818,7 +818,7 @@ async def inline_query_handler(client, query):
                 result = generate_time(query_timezone, ["zoneName", "countryName"])
 
             if not result:
-                result = f"Timezone info not available for <b>{lel}</b>"
+                result = f"Timezone info not available for <b>{lel}<b>"
 
             results.append(
                 InlineQueryResultArticle(
@@ -875,7 +875,7 @@ async def inline_query_handler(client, query):
                 .img["data-src"]
             )
             app_details = "<a href='" + app_icon + "'>📲&#8203;</a>"
-            app_details += " <b>" + app_name + "</b>"
+            app_details += " <b>" + app_name + "<b>"
             app_details += (
                 "\n\n<code>Developer :</code> <a href='"
                 + app_dev_link
