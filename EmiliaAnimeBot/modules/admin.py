@@ -86,14 +86,14 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}<b>!",
         parse_mode=ParseMode.HTML)
 
     log_message = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
+        f"<b>{html.escape(chat.title)}:<b>\n"
         f"#PROMOTED\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"<b>Admin:<b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>User:<b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -154,14 +154,14 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}<b>!",
             parse_mode=ParseMode.HTML)
 
         log_message = (
-            f"<b>{html.escape(chat.title)}:</b>\n"
+            f"<b>{html.escape(chat.title)}:<b>\n"
             f"#DEMOTED\n"
-            f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+            f"<b>Admin:<b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>User:<b> {mention_html(user_member.user.id, user_member.user.first_name)}"
         )
 
         return log_message
@@ -268,9 +268,9 @@ def pin(update: Update, context: CallbackContext) -> str:
             else:
                 raise
         log_message = (
-            f"<b>{html.escape(chat.title)}:</b>\n"
+            f"<b>{html.escape(chat.title)}:<b>\n"
             f"#PINNED\n"
-            f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}"
+            f"<b>Admin:<b> {mention_html(user.id, html.escape(user.first_name))}"
         )
 
         return log_message
@@ -295,9 +295,9 @@ def unpin(update: Update, context: CallbackContext) -> str:
             raise
 
     log_message = (
-        f"<b>{html.escape(chat.title)}:</b>\n"
+        f"<b>{html.escape(chat.title)}:<b>\n"
         f"#UNPINNED\n"
-        f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}")
+        f"<b>Admin:<b> {mention_html(user.id, html.escape(user.first_name))}")
 
     return log_message
 
